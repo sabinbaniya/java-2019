@@ -8,3 +8,36 @@ The java.lang.Class class provides many methods that can be used to get metadata
 
 The java.lang and java.lang.reflect packages provide classes for java reflection.
 
+Example :
+```
+import java.lang.reflect.*;
+public class ReflectionDemo1
+{
+    public static void main (String args[])
+    {
+            Class c = Class.forName ("java.awt.Dimension");
+            System.out.println ("Class : " + c.getName ());
+            System.out.println ("Constructors:");
+            Constructor constructors[] = c.getConstructors ();
+            for (int i = 0; i < constructors.length; i++)
+         {
+             System.out.println (" " + constructors[i]);
+         }
+      
+            System.out.println ("Fields:");
+            Field fields[] = c.getFields ();
+            for (int i = 0; i < fields.length; i++)
+         {
+             System.out.println (" " + fields[i]);
+         }
+         
+            System.out.println ("Methods:");
+            Method methods[] = c.getMethods ();
+            for (int i = 0; i < methods.length; i++)
+         {
+             System.out.println (" " + methods[i]);
+         }
+    }
+}
+ ```
+
