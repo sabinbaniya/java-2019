@@ -8,36 +8,22 @@ The java.lang.Class class provides many methods that can be used to get metadata
 
 The java.lang and java.lang.reflect packages provide classes for java reflection.
 
-Example :
-```
-import java.lang.reflect.*;
-public class ReflectionDemo1
-{
-    public static void main (String args[])
-    {
-            Class c = Class.forName ("java.awt.Dimension");
-            System.out.println ("Class : " + c.getName ());
-            System.out.println ("Constructors:");
-            Constructor constructors[] = c.getConstructors ();
-            for (int i = 0; i < constructors.length; i++)
-         {
-             System.out.println (" " + constructors[i]);
-         }
-      
-            System.out.println ("Fields:");
-            Field fields[] = c.getFields ();
-            for (int i = 0; i < fields.length; i++)
-         {
-             System.out.println (" " + fields[i]);
-         }
-         
-            System.out.println ("Methods:");
-            Method methods[] = c.getMethods ();
-            for (int i = 0; i < methods.length; i++)
-         {
-             System.out.println (" " + methods[i]);
-         }
-    }
-}
- ```
+<h4>Advantages of Reflection in Java</h4>
+---
+
+Extensibility Features: An application may use external, user-defined classes by creating instances of extensibility objects using their fully-qualified names.
+
+Class Browsers and Visual Development Environments: A class browser must be ready to enumerate the members of classes. Visual development environments can enjoy making use of type information available in reflection to assist the developer in writing the correct code.
+
+Debuggers and Test Tools: Debuggers got to be ready to examine private members in classes. Test harnesses can make use of reflection to systematically call a discoverable set APIs defined on a category, to ensure a high level of code coverage during a test suite.
+
+<h4>Disadvantages of reflection in Java</h4>
+---
+
+Performance Overhead: Certain Java virtual machine optimizations cannot be performed because reflection involves types that are dynamically resolved.
+
+Security Restrictions: When running under a security manager, reflection requires a runtime permission which may not be present. This is in a crucial consideration for code that has got to run during a restricted security context, like in an Applet.
+
+Exposure of Internals: The use of reflection can result in unexpected side-effects because reflection allows code to perform operations that would be illegal in non-reflective code, such as accessing private fields and methods, which can render code dysfunctional and should destroy portability. Reflective code breaks abstractions and thus may change behavior with upgrades of the platform.
+
 
