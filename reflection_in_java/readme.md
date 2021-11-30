@@ -9,7 +9,7 @@ The java.lang.Class class provides many methods that can be used to get metadata
 The java.lang and java.lang.reflect packages provide classes for java reflection.
 
 <h4>Advantages of Reflection in Java</h4>
----
+<hr/>
 
 Extensibility Features: An application may use external, user-defined classes by creating instances of extensibility objects using their fully-qualified names.
 
@@ -18,7 +18,7 @@ Class Browsers and Visual Development Environments: A class browser must be read
 Debuggers and Test Tools: Debuggers got to be ready to examine private members in classes. Test harnesses can make use of reflection to systematically call a discoverable set APIs defined on a category, to ensure a high level of code coverage during a test suite.
 
 <h4>Disadvantages of reflection in Java</h4>
----
+<hr/>
 
 Performance Overhead: Certain Java virtual machine optimizations cannot be performed because reflection involves types that are dynamically resolved.
 
