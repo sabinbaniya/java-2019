@@ -1,6 +1,5 @@
 <h3>Garbage Collection in Java</h3>
 
-
 <p>Garbage collection in java is the mechanism by which JVM automatically removes the unused objects from the memory. In Java the space for program that is allocated by JVM during runtime is allocated in a heap. And the heap is also divided into two parts: </p>
 <bold>Young Space &</bold>
 <bold>Old Space</bold>
