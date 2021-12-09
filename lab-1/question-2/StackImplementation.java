@@ -17,12 +17,24 @@ class StackImplementation{
             return false;
         }
     }
-    
-    boolean isFull(){
-        if(top == 5){
+
+    boolean isEmpty(){
+        if(top == -1){
             return true;
         }else{
             return false;
         }
+    }
+
+    void push(int val){
+        top++;
+        arr[top] = val;
+        System.out.println("Value " + val + "sucessfully inserted at " + top + "position");
+    }
+
+    int pop(){
+        int val = arr[top];
+        top--;
+        return val;
     }
 }
