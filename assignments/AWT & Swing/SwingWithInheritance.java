@@ -5,10 +5,8 @@ import javax.swing.JButton;
 
 class SwingWithInheritance extends JFrame
 {
-    public static void main(String[] args)
+    public SwingWithInheritance()
     {
-        JFrame frame = new JFrame("Swing With Inheritance");
-
         JLabel label1 = new JLabel("Number 1");
         label1.setBounds(30,40,70,50);
         
@@ -33,17 +31,22 @@ class SwingWithInheritance extends JFrame
         JButton divButton = new JButton("Divide");
         divButton.setBounds(350,170,80,30);
 
-        frame.add(label1);
-        frame.add(tf1);
-        frame.add(label2);
-        frame.add(tf2);
-        frame.add(addButton);
-        frame.add(subButton);
-        frame.add(mulButton);
-        frame.add(divButton);
+        add(label1);
+        add(tf1);
+        add(label2);
+        add(tf2);
+        add(addButton);
+        add(subButton);
+        add(mulButton);
+        add(divButton);
 
-        frame.setSize(700,550);
-        frame.setLayout(null);
-        frame.setVisible(true);
+        setSize(700,550);
+        setLayout(null);
+        setVisible(true);
+    }
+
+    public static void main(String[] args)
+    {
+        new SwingWithInheritance();
     }
 }
