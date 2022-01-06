@@ -1,0 +1,2 @@
+## LifeCycle method in Applet
+There are 5 lifecycle method in Applet. They are: ```init(), start(), paint(), stop() & destroy()```. There are 4 life cycle states they are born, running, idle & dead. ```init()``` is run before the applet is born. ```start()``` is run immediately after the applet is born. ```paint()``` method is used to draw graphics in applet. ```stop()``` method is run when the applet goes to idle state. ```destroy()``` method is called before the applet dies.
