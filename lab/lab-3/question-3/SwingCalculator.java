@@ -1,7 +1,6 @@
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 class SwingCalculator
 {
@@ -25,10 +24,10 @@ class SwingCalculator
         tf3.setBounds(110,140,150,30);
 
         JButton addButton = new JButton("Add");
-        addButton.setBounds(40,170,60,30);
+        addButton.setBounds(40,200,80,50);
 
         JButton subButton = new JButton("Subtract");
-        subButton.setBounds(130,170,60,30);
+        subButton.setBounds(110,200,20,30);
 
         frame.add(label1);
         frame.add(label2);
@@ -39,9 +38,21 @@ class SwingCalculator
         frame.add(addButton);
         frame.add(subButton);
 
-        frame.setSize(1000,1000);
+        addButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				tf3.setText(""+(Integer.parseInt(tf1.getText())+Integer.parseInt(tf2.getText())));
+			}
+		});
+
+		subButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				tf3.setText(""+(Integer.parseInt(tf1.getText())-Integer.parseInt(tf2.getText())));
+			}
+		});
+
+        frame.setSize(700,700);
         frame.setVisible(true);
-        frame.setLayout(null);
+        frame.setLayout(new BorderLayout());
     }
 
     public static void main(String[] args)
@@ -49,3 +60,6 @@ class SwingCalculator
         new SwingCalculator();
     }
 }
+
+// Create a swing GUI that contains a two buttons (add and subtract) and three text fields. When the buttons are clicked sum or difference of values of first two text fields should be displayed in the third text field respectively.
+// Create an awt GUI that contains a button, and two text fields. When the button is clicked the value of first text field should be checked and display "odd number" or "even number" in the second text field.
