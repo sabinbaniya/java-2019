@@ -1,3 +1,5 @@
+// Create a swing GUI that contains a two buttons (add and subtract) and three text fields. When the buttons are clicked sum or difference of values of first two text fields should be displayed in the third text field respectively.
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -60,6 +62,3 @@ class SwingCalculator
         new SwingCalculator();
     }
 }
-
-// Create a swing GUI that contains a two buttons (add and subtract) and three text fields. When the buttons are clicked sum or difference of values of first two text fields should be displayed in the third text field respectively.
-// Create an awt GUI that contains a button, and two text fields. When the button is clicked the value of first text field should be checked and display "odd number" or "even number" in the second text field.
